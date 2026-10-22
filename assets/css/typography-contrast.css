@@ -2,7 +2,7 @@
 :root {
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: Be Vietnam Pro, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Be Vietnam Pro", Arial, sans-serif;
 }
 
 /* Remove the widely tracked, overly airy typography from the previous pass. */
@@ -113,4 +113,19 @@ button, [role="button"] {
   }
   .banner__hero-sub { letter-spacing: .025em !important; }
   .brand__text strong { letter-spacing: .02em !important; }
+}
+
+/* Final font lock: prevent legacy or component CSS from applying a handwritten font. */
+html, body, body *, body *::before, body *::after {
+  font-family: "Be Vietnam Pro", Arial, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6,
+.vc-heading, .banner__hero-title, .about-item__title,
+.suit-title, .process-step__body h3, .section-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+}
+.process-step__body p,
+.center-text, .center-text--white, .center-text--lead,
+p, li, a, button, input, textarea, select, label, summary {
+  font-family: "Be Vietnam Pro", Arial, sans-serif !important;
 }
