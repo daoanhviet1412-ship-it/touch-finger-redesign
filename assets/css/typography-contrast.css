@@ -1,13 +1,13 @@
-/* Typography and contrast pass — Vehom-inspired: crisp, compact, confident */
+/* Typography and contrast pass — references V-Garden/VEHOM: Lora, compact spacing, confident contrast */
 :root {
-  --font-display: "Inter", "Arial", sans-serif;
-  --font-serif: "Inter", "Arial", sans-serif;
-  --font-sans: "Inter", "Arial", sans-serif;
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: "Lora", Georgia, "Times New Roman", serif;
 }
 
 /* Remove the widely tracked, overly airy typography from the previous pass. */
 html, body, button, input, textarea, select {
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
 }
 body {
   letter-spacing: 0 !important;
@@ -25,8 +25,8 @@ p, li, .about-item__desc, .suit-card p, .faq-item, .review-card p,
 h1, h2, h3, h4, h5, h6,
 .vc-heading, .banner__hero-title, .about-item__title,
 .suit-title, .process-step__body h3, .section-title {
-  font-family: "Inter", "Arial", sans-serif !important;
-  letter-spacing: -0.035em !important;
+  font-family: "Lora", Georgia, "Times New Roman", serif !important;
+  letter-spacing: -0.02em !important;
   line-height: 1.2;
   font-weight: 700;
   text-wrap: balance;
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6,
 .banner__hero-desc { color: rgba(255,255,255,.92) !important; }
 .brand__text strong {
   letter-spacing: .035em !important;
-  font-family: "Inter", "Arial", sans-serif !important;
+  font-family: "Lora", Georgia, "Times New Roman", serif !important;
   font-weight: 750;
 }
 .brand__text small { letter-spacing: 0 !important; }
@@ -103,12 +103,12 @@ button, [role="button"] {
   body { font-size: 16px; line-height: 1.68; }
   .vc-heading {
     font-size: clamp(1.45rem, 6vw, 1.85rem);
-    letter-spacing: -.03em !important;
+    letter-spacing: -.02em !important;
     line-height: 1.23;
   }
   .banner__hero-title {
     font-size: clamp(2rem, 8vw, 2.75rem);
-    letter-spacing: -.04em !important;
+    letter-spacing: -.025em !important;
     line-height: 1.12;
   }
   .banner__hero-sub { letter-spacing: .025em !important; }
