@@ -1,1 +1,530 @@
-<h1>Touch Finger redesign</h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trung Tâm Sinh Trắc Touch Finger | Sinh Trắc Vân Tay Đà Nẵng</title>
+  <meta name="description" content="Touch Finger tại Đà Nẵng đồng hành cùng phụ huynh và người trưởng thành tìm hiểu bản thân, trao đổi về định hướng phát triển và lựa chọn cách học tập phù hợp." />
+  <meta name="theme-color" content="#245B48" />
+  <link rel="canonical" href="https://sinhtracvantaydanang.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trung Tâm Sinh Trắc Touch Finger | Sinh Trắc Vân Tay Đà Nẵng" />
+  <meta property="og:description" content="Touch Finger tại Đà Nẵng đồng hành cùng gia đình trong hành trình tìm hiểu bản thân và định hướng phát triển." />
+  <meta property="og:image" content="/assets/img/logo.png" />
+  <meta property="og:url" content="https://sinhtracvantaydanang.com/" />
+  <meta property="og:locale" content="vi_VN" />
+
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/logo-square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/redesign.css" />
+  <style>
+    /* ── Luxury decorative gradient blobs ── */
+    .home-section:nth-of-type(even)::before,
+    .home-section::before {
+      content: none;
+    }
+    .about-grid::before,
+    .about-grid::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .about-grid::before {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(212,113,46,0.06) 0%, transparent 70%);
+      top: -80px; right: -80px;
+    }
+    .about-grid::after {
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(26,16,64,0.04) 0%, transparent 70%);
+      bottom: -60px; left: -60px;
+    }
+    .suit-grid::before {
+      content: "";
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,113,46,0.04) 0%, transparent 70%);
+      top: -100px; left: -100px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(212,113,46,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(212,113,46,0.05) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    /* Banner fade overlay — chồng lên banner::after của CSS */
+    .banner__hero {
+      position: relative;
+      z-index: 3;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Trung Tâm Sinh Trắc Touch Finger",
+    "image": "https://sinhtracvantaydanang.com/assets/img/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "48 Phạm Văn Nghị",
+      "addressLocality": "Quận Thanh Khê",
+      "addressRegion": "Đà Nẵng",
+      "addressCountry": "VN"
+    },
+    "telephone": "+84762595662",
+    "email": "Touchfingerdanang@gmail.com",
+    "url": "https://sinhtracvantaydanang.com/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung</a>
+
+  <!-- Thanh thông tin trên cùng -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__item"><i class="fas fa-map-marker-alt"></i> 48 Phạm Văn Nghị, Q. Thanh Khê, TP. Đà Nẵng</span>
+      <span class="topbar__sep">|</span>
+      <a class="topbar__item" href="mailto:Touchfingerdanang@gmail.com"><i class="fas fa-envelope"></i> Touchfingerdanang@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Trang chủ Touch Finger">
+        <img src="/assets/img/logo.png" alt="Logo Touch Finger" class="brand__logo" width="48" height="48" />
+        <span class="brand__text">
+          <strong>TOUCH FINGER</strong>
+          <small>Trung tâm sinh trắc vân tay</small>
+        </span>
+      </a>
+      <nav class="header__nav" aria-label="Điều hướng chính"><a href="#ve-touch-finger">Về Touch Finger</a><a href="#dich-vu">Dịch vụ</a><a href="#quy-trinh">Quy trình</a><a href="#hinh-anh">Hình ảnh</a><a href="#phan-hoi">Phản hồi</a><a href="#cau-hoi">Câu hỏi</a></nav>
+      <a href="tel:0762595662" class="header__cta"><i class="fas fa-phone"></i> 0762.595.662</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Banner (slider) -->
+    <section class="banner" id="home">
+      <div class="banner__slides">
+        <img class="banner__slide is-active" src="/assets/img/slider4.jpg" alt="Vì trẻ em Việt Nam - Sinh trắc vân tay" width="1024" height="256" />
+      </div>
+      <div class="banner__hero">
+        <p class="banner__hero-sub">Trung tâm Sinh trắc vân tay tại Đà Nẵng</p>
+        <h1 class="banner__hero-title">Hiểu con sâu sắc hơn. <em>Đồng hành đúng cách.</em></h1>
+        <p class="banner__hero-desc">Touch Finger đồng hành cùng phụ huynh và người trưởng thành trong hành trình tìm hiểu bản thân, trao đổi về cách học tập và phát triển phù hợp với từng cá nhân.</p>
+        <div class="hero-actions"><a class="hero-actions__primary" href="tel:0762595662"><i class="fas fa-phone"></i> Tư vấn trực tiếp</a><a class="hero-actions__secondary" href="#dich-vu">Tìm hiểu dịch vụ <i class="fas fa-arrow-down"></i></a></div>
+      </div>
+    </section>
+
+    <!-- Heading trung tâm + Về chúng tôi / Sứ mệnh / Tầm nhìn -->
+    <section class="home-section" id="ve-touch-finger">
+      <div class="container">
+        <header class="section-head section-head--blue">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-fingerprint"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--blue">TRUNG TÂM SINH TRẮC TOUCH FINGER</h2>
+        </header>
+        <div class="about-grid" style="position:relative">
+          <article class="about-item" style="--reveal-delay:0">
+            <div class="about-item__icon about-item__icon--1" aria-hidden="true">
+              <span class="about-item__icon-ring"></span>
+              <i class="fas fa-house-chimney"></i>
+            </div>
+            <h2 class="about-item__title">VỀ CHÚNG TÔI</h2>
+            <p>Touch Finger cung cấp dịch vụ quét và ghi nhận đặc điểm đường vân tay, kết hợp trao đổi tư vấn để khách hàng có thêm một góc nhìn tham khảo khi tìm hiểu bản thân. Báo cáo không thay thế đánh giá tâm lý, giáo dục hay chuyên môn y tế.</p>
+          </article>
+          <article class="about-item" style="--reveal-delay:120">
+            <div class="about-item__icon about-item__icon--2" aria-hidden="true">
+              <span class="about-item__icon-ring"></span>
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h2 class="about-item__title">SỨ MỆNH</h2>
+            <p>Chúng tôi mong muốn giúp mỗi gia đình có thêm cơ hội trò chuyện về điểm mạnh, nhu cầu và cách đồng hành cùng trẻ. Mọi định hướng nên được kết hợp với quan sát thực tế, sở thích và quá trình phát triển của từng người.</p>
+          </article>
+          <article class="about-item" style="--reveal-delay:240">
+            <div class="about-item__icon about-item__icon--3" aria-hidden="true">
+              <span class="about-item__icon-ring"></span>
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h2 class="about-item__title">TẦM NHÌN</h2>
+            <p>Touch Finger hướng đến dịch vụ tư vấn rõ ràng, tôn trọng sự khác biệt của từng cá nhân và khuyến khích gia đình cân nhắc thông tin một cách chủ động.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dịch vụ -->
+    <section class="home-section home-section--tight" id="dich-vu">
+      <div class="container">
+        <header class="section-head section-head--blue">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-people-group"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--blue">SINH TRẮC VÂN TAY PHÙ HỢP VỚI AI</h2>
+        </header>
+        <p class="center-text center-text--lead">
+          Sinh trắc vân tay sẽ cho bạn biết những thông số tuyệt vời của bộ não. Từ những thông số này,<br />
+          chúng ta có thể xác định được con đường đi phù hợp nhất để<br />
+          phát huy tối đa tiềm lực của bản thân
+        </p>
+        <div class="suit-grid" style="position:relative">
+          <article class="suit-card" style="--reveal-delay:0">
+            <div class="suit-card__visual">
+              <img src="/assets/img/Giai-doan-phat-trien-toan-dien-cua-tre-em-la-gi.jpg" alt="Phù hợp với trẻ em" loading="lazy" />
+            </div>
+            <h2 class="suit-title">
+              <span class="suit-title__badge" aria-hidden="true"><i class="fas fa-child-reaching"></i></span>
+              <span class="suit-title__text">PHÙ HỢP VỚI TRẺ EM</span>
+            </h2>
+            <div class="suit-box">
+              <ul>
+                <li>Giúp cha mẹ khám phá những tài năng thiên bẩm của con và bắt đầu định hướng phát triển từ sớm.</li>
+                <li>Giúp cha mẹ hiểu hơn về tính cách của con để xây dựng mối quan hệ tốt đẹp trong gia đình.</li>
+                <li>Giúp xác định loại thông minh của con theo Thuyết trí thông minh đa dạng của Giáo sư Howard Garner.</li>
+                <li>Xây dựng một phương pháp giáo dục phù hợp nhất để phát huy đa tài năng của con.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="suit-card" style="--reveal-delay:120">
+            <div class="suit-card__visual">
+              <img src="/assets/img/dao-tao-youscan-8-scaled-1.jpg" alt="Phù hợp với cá nhân" loading="lazy" />
+            </div>
+            <h2 class="suit-title">
+              <span class="suit-title__badge" aria-hidden="true"><i class="fas fa-user-graduate"></i></span>
+              <span class="suit-title__text">PHÙ HỢP VỚI CÁ NHÂN</span>
+            </h2>
+            <div class="suit-box">
+              <ul>
+                <li>Khám phá chính mình bằng cách khám phá các năng lực cốt lỗi của bạn.</li>
+                <li>Giúp bạn định hướng nghề nghiệp phù hợp với tài năng bẩm sinh.</li>
+                <li>Khơi dậy niềm đam mê của bạn trong công việc để đạt được mục tiêu và thành công.</li>
+                <li>Tư vấn phát triển phong cách cá nhân, tự tin thể hiện. Hiểu và làm giàu giá trị sống của bản thân.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="suit-card" style="--reveal-delay:240">
+            <div class="suit-card__visual">
+              <img src="/assets/img/sinh-trac-van-tay-la-gi1.jpg" alt="Phù hợp với doanh nghiệp" loading="lazy" />
+            </div>
+            <h2 class="suit-title">
+              <span class="suit-title__badge" aria-hidden="true"><i class="fas fa-building"></i></span>
+              <span class="suit-title__text">PHÙ HỢP VỚI DOANH NGHIỆP</span>
+            </h2>
+            <div class="suit-box">
+              <ul>
+                <li>Giúp doanh nghiệp sàng lọc trong tuyển dụng, đánh giá năng lực thực hiện và phong cách của ứng viên.</li>
+                <li>Khám phá tiềm năng của nhân viên nhằm bố trí đúng người vào đúng vị trí.</li>
+                <li>Tìm ra lãnh đạo tài ba cho doanh nghiệp.</li>
+                <li>Tư vấn đào tạo và phát triển nhân sự.</li>
+                <li>Khai thác tốt nhất năng lực của đội ngũ nhân sự.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quy trình thực hiện -->
+    <section class="process" id="quy-trinh">
+      <div class="container">
+        <header class="section-head section-head--orange section-head--on-dark">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-route"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--orange">QUY TRÌNH THỰC HIỆN SINH TRẮC VÂN TAY</h2>
+        </header>
+        <p class="center-text center-text--white">
+          Quy trình thực hiện Sinh trắc vân tay tại TOUCH FINGER được coi là quy trình đạt chuẩn, nghiêm túc và khách quan<br />
+          được thực hiện bởi đội ngũ chuyên gia giàu kinh nghiệm, cho ra kết quả chuẩn xác và uy tín nhất.
+        </p>
+        <div class="process-track">
+          <article class="process-step" style="--reveal-delay:0">
+            <div class="process-step__node">
+              <span class="process-step__num">01</span>
+              <div class="process-step__medallion">
+                <img src="/assets/img/icon1.png" alt="" width="80" height="80" loading="lazy" />
+              </div>
+            </div>
+            <div class="process-step__body">
+              <h3>Bước 1: Scan dấu vân tay</h3>
+              <p>Tiến hành scan ba chiều vân tay của 10 ngón để thực hiện bước đầu tiên trong quy trình thực hiện sinh trắc vân tay.</p>
+            </div>
+          </article>
+          <article class="process-step" style="--reveal-delay:100">
+            <div class="process-step__node">
+              <span class="process-step__num">02</span>
+              <div class="process-step__medallion">
+                <img src="/assets/img/icon2.png" alt="" width="80" height="80" loading="lazy" />
+              </div>
+            </div>
+            <div class="process-step__body">
+              <h3>Bước 2: Phân tích vân tay</h3>
+              <p>Thông số sẽ được gửi lên hệ thống. Sau đó, Các chuyên gia từ TOUCH FINGER sẽ phân tích và gửi báo cáo về sinh trắc vân tay.</p>
+            </div>
+          </article>
+          <article class="process-step" style="--reveal-delay:200">
+            <div class="process-step__node">
+              <span class="process-step__num">03</span>
+              <div class="process-step__medallion">
+                <img src="/assets/img/icon3.png" alt="" width="80" height="80" loading="lazy" />
+              </div>
+            </div>
+            <div class="process-step__body">
+              <h3>Bước 3: Đưa ra giải pháp</h3>
+              <p>Sau khi nhận báo cáo. Chúng tôi sẽ đưa ra những phân tích, giải pháp tốt nhất để giúp bạn lựa chọn con đường sự nghiệp</p>
+            </div>
+          </article>
+          <article class="process-step" style="--reveal-delay:300">
+            <div class="process-step__node">
+              <span class="process-step__num">04</span>
+              <div class="process-step__medallion">
+                <img src="/assets/img/icon4.png" alt="" width="80" height="80" loading="lazy" />
+              </div>
+            </div>
+            <div class="process-step__body">
+              <h3>Bước 4: Chuyên viên tư vấn</h3>
+              <p>Tư vấn 1-1 bởi chuyên viên. Giúp bạn đưa ra các định hướng tốt hơn về cuộc sống cũng như sự nghiệp trong tương lai</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thư viện hình ảnh — giữ nguyên ảnh hoạt động gốc -->
+    <section class="home-section" id="hinh-anh">
+      <div class="container">
+        <header class="section-head section-head--blue">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-camera"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--blue">THƯ VIỆN HÌNH ẢNH</h2>
+        </header>
+        <p class="center-text center-text--lead">Hình ảnh hoạt động tại các sự kiện hợp tác cùng Prudential (PRUventure)</p>
+        <div class="gallery-grid gallery-grid--events">
+          <a class="gallery-item" href="/assets/img/gallery-pru-01.jpg" target="_blank" rel="noopener" style="--reveal-delay:0">
+            <img src="/assets/img/gallery-pru-01.jpg" alt="Sự kiện Touch Finger tại PRUventure - Prudential" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-02.jpg" target="_blank" rel="noopener" style="--reveal-delay:40">
+            <img src="/assets/img/gallery-pru-02.jpg" alt="Scan dấu vân tay tại sự kiện Prudential" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-03.jpg" target="_blank" rel="noopener" style="--reveal-delay:80">
+            <img src="/assets/img/gallery-pru-03.jpg" alt="Tư vấn sinh trắc vân tay tại sự kiện" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-04.jpg" target="_blank" rel="noopener" style="--reveal-delay:120">
+            <img src="/assets/img/gallery-pru-04.jpg" alt="Khách hàng tham gia sự kiện Touch Finger" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-05.jpg" target="_blank" rel="noopener" style="--reveal-delay:160">
+            <img src="/assets/img/gallery-pru-05.jpg" alt="Đăng ký thông tin tại sự kiện Prudential" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-06.jpg" target="_blank" rel="noopener" style="--reveal-delay:200">
+            <img src="/assets/img/gallery-pru-06.jpg" alt="Hội thảo sinh trắc học tại sự kiện" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-07.jpg" target="_blank" rel="noopener" style="--reveal-delay:240">
+            <img src="/assets/img/gallery-pru-07.jpg" alt="Buổi workshop tại sự kiện hợp tác" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-08.jpg" target="_blank" rel="noopener" style="--reveal-delay:280">
+            <img src="/assets/img/gallery-pru-08.jpg" alt="Chương trình Sinh trắc học tại sự kiện Prudential" loading="lazy" />
+          </a>
+          <a class="gallery-item" href="/assets/img/gallery-pru-09.jpg" target="_blank" rel="noopener" style="--reveal-delay:320">
+            <img src="/assets/img/gallery-pru-09.jpg" alt="Sự kiện hợp tác Touch Finger và Prudential" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Câu hỏi thường gặp -->
+    <section class="home-section home-section--tight" id="cau-hoi">
+      <div class="container">
+        <header class="section-head section-head--blue">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-circle-question"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--blue">CÂU HỎI THƯỜNG GẶP</h2>
+        </header>
+        <div class="faq-wrap">
+          <div class="faq-col">
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-baby"></i></span><span class="faq__question">Bao nhiêu tuổi thì sử dụng được dịch vụ Sinh trắc vân tay?</span></summary>
+              <div class="faq__body">
+                <p>Bắt đầu 1 tuổi trở lên là có thể làm sinh trắc vân tay, (tốt nhất là trên 18 tháng – khi con đã biết nói và đã biết thể hiện cảm xúc bằng ngôn ngữ ) Lúc đó dấu vân tay cũng đã hoàn thiện rõ và khi lớn lên vân tay chỉ phóng to kích thước chứ không hề thay đổi.</p>
+                <p>Với sinh trắc vân tay phụ huynh nên làm cho con càng sớm càng tốt ạ, vì ở độ tuổi càng nhỏ (nhất là  0 – 6 tuổi, là giai đoạn vàng để định hướng) con chưa bị ảnh hưởng nhiều bởi môi trường nếu bố mẹ biết sớm được tính cách và khả năng của con sẽ giúp con có định hướng phát triển làm nền tảng sau này thành công nhanh hơn.</p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-seedling"></i></span><span class="faq__question">Tôi muốn con mình phát triển tự nhiên?</span></summary>
+              <div class="faq__body">
+                <p>“Tiềm năng con người cũng như tài nguyên thiên nhiên, được chôn vùi rất sâu. Bạn phải nỗ lực tìm kiếm chứ nó không nằm ngay trên bề mặt. Bạn thậm chí phải tạo ra hoàn cảnh để nó có thể được bộc lộ.” (Sir Ken Robinson) Không có con đường đến với thành công dễ dàng nhưng luôn có con đường dễ hơn (tại sao phải chọn đường khó nhất khi có con đường dễ hơn đó là phát hiện và phát huy tiềm năng bên trong mình). Sinh Trắc Vân Tay, cho biết thuyết đa thông minh là phương pháp khoa học phân tích dấu vân tay chính xác và mới nhất hiện nay, nhằm xác định những thế mạnh độc đáo của bạn hoặc người thân của bạn. Để từ đó học cách phát huy sao cho hiệu quả nhất.</p>
+                <p>Nhiều phụ huynh quan tâm đến con vẫn thường nhầm lẫn sở thích với năng khiếu. Những gì con bạn thích đôi khi không phải do cháu giỏi mà do thích môi trường học, hay thích thầy cô nhẹ nhàng và được bố mẹ động viên… Và nếu có thể được định hướng cho cháu thích những năng khiếu bẩm sinh thì sở trường đó sẽ được phát huy tối đa. Bản thân chính việc phải học, phải thi theo một chuẩn chung của toàn xã hội đã là không thuận theo tự nhiên của mỗi cá nhân khác biệt.</p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-brain"></i></span><span class="faq__question">Báo cáo sinh trắc vân tay cho biết được điều gì?</span></summary>
+              <div class="faq__body">
+                <p>Báo cáo của đơn vị cung cấp dịch vụ có thể trình bày các mẫu vân tay và diễn giải theo phương pháp riêng của đơn vị. Tuy nhiên, hiện chưa có đủ bằng chứng khoa học vững chắc để kết luận rằng phân tích vân tay có thể xác định chính xác trí thông minh, tính cách, năng khiếu hoặc dự đoán thành công của một người.</p>
+                <p>Vì vậy, hãy xem nội dung báo cáo như một nguồn tham khảo để gợi mở cuộc trò chuyện, không dùng làm căn cứ duy nhất cho quyết định giáo dục, nghề nghiệp hay sức khỏe. Quan sát thực tế, trò chuyện với trẻ và đánh giá từ chuyên gia phù hợp vẫn rất quan trọng.</p>
+              </div>
+            </details>
+          </div>
+          <div class="faq-col">
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-scale-balanced"></i></span><span class="faq__question">Sự khác biệt giữa sinh trắc vân tay và bói toán?</span></summary>
+              <div class="faq__body">
+                <p>Sinh trắc vân tay</p>
+                <p>Dựa trên những công trình nghiên cứu của các nhà khoa học từ thế kỷ XIX đã được chứng minh và đạt giải Nobel</p>
+                <p>Dấu vân tay là dấu ấn riêng của mỗi người.</p>
+                <p>Tuyệt đối không có 2 dấu vân tay trùng nhau. Xác suất hai cá nhân có dấu vân tay trùng nhau lên tới 1/64 tỷ kể cả trường hợp sinh đôi cùng trứng</p>
+                <p>Dấu vân tay vĩnh viễn sẽ không thay đổi trừ những tác động nghiêm trọng từ môi trường.</p>
+                <p>Được ứng dụng thành công trong các ngành y tế tìm ra căn bệnh di truyền, xác định tội phạm thông qua dấu vân tay</p>
+                <p>Khoa học phân tích về não bộ, các chỉ số đưa ra là bẩm sinh.</p>
+                <p>Đưa ra các thông số để xác định năng khiếu, sở trường điểm mạnh, điểm yếu bẩm sinh</p>
+                <p>Cung cấp giải pháp kích hoạt điểm mạnh, cải thiện điểm yếu nhằm hướng tới tương lai tốt đẹp</p>
+                <p>Bói toán</p>
+                <p>Không có sự nghiên cứu chính thống, rõ ràng. Chủ yếu do quan sát, kinh nghiệm đúc kết tự phát.</p>
+                <p>Xem bói (qua đường chỉ tay) sẽ thay đổi theo thời gian, thường là 6 tháng 1 lần</p>
+                <p>Một số nơi trở thành vấn nạn hủ tục mê tín dị đoan</p>
+                <p>Phán trước về tương lai, giàu nghèo hay thành công, sướng khổ</p>
+                <p>Con người có cái nhìn hoặc là ảo tưởng về tương lai tươi đẹp phía trước hoặc là thất vọng, suy nghĩ tiêu cực về tương lai</p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-hand"></i></span><span class="faq__question">Trẻ em còn nhỏ quá, lớn lên vân tay sẽ thay đổi thì sao?</span></summary>
+              <div class="faq__body">
+                <p>Cấu trúc vân tay sẽ không thay đổi, khi trẻ lớn lên vân tay sẽ chỉ to lên thôi. Hơn nữa, đây là những chỉ số bẩm sinh, nên phụ huynh làm lúc trẻ còn nhỏ hay lớn lên làm thì cũng đều là một bài báo cáo phân tích giống nhau. Vậy biết sớm tốt hơn nhiều.</p>
+                <p>Mỗi cá nhân cũng chỉ làm duy nhất 1 bản Sinh trắc vân tay, vì đây là yếu tố bẩm sinh.</p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary><span class="faq__glyph" aria-hidden="true"><i class="fas fa-user-check"></i></span><span class="faq__question">Người trưởng thành có làm sinh trắc vân tay được hay không?</span></summary>
+              <div class="faq__body">
+                <p>Đây là một câu hỏi khá hay, và nếu bạn đang có chung thắc mắc này vui lòng đọc hết thông tin dưới đây mà TOUCH FINGER cung cấp nhé:</p>
+                <p>Các nhà bác học cho rằng dấu vân tay được hình thành dưới tác động của hệ thống gen di truyền mà thai nhi được thừa hưởng và tác động của môi trường thông qua hệ thống mạch máu và hệ thống thần kinh nằm giữa hạ bì và biểu bì. Một vài trong số các tác động đó là sự cung cấp ôxy, sự hình thành các dây thần kinh, sự phân bố các tuyến mồ hôi, sự phát triển của các biểu mô… Và mặc dù có chung một hệ thống gen di truyền nhưng vân tay ở mười đầu ngón tay của mỗi cá nhân khác nhau.</p>
+                <p>Hai anh em (chị em) song sinh cùng trứng có dấu vân tay khá là giống nhau nhưng vẫn có thể phân biệt được rõ dấu vân tay của từng người. Đó là vì tuy có cùng hệ thống gen di truyền và chia sẻ chung môi trường phát triển trong bụng mẹ nhưng do họ có vị trí khác nhau trong dạ con nên môi trường vi mô của họ khác nhau và do đó có dấu vân tay khác nhau.</p>
+                <p>Cuối thế kỉ 19 năm 1880, Tiến sĩ Henry Faulds đã chứng minh được rằng có thể biết được chính xác tổng số lượng vân tay TRC (Total Ridge Count) và mức độ phụ thuộc của chúng vào gen di truyền của mỗi người. Vì vậy có thể coi TRC là một biểu hiện phụ trợ của hệ thống gen mà con người được thừa kế. Thông qua vân tay, chúng ta có thể biết được sự phân bổ các nơ trôn thần kinh tại mỗi vị trí thùy não bằng việc phân tích TRC. TRC phản ánh gần đúng sự đóng góp của từng gen riêng biệt trong hệ thống gen vào việc hình thành một con người cụ thể.</p>
+                <p>Năm 1926 Tiến sĩ Harold Cummins được xem là cha đẻ của ngành nghiên cứu khoa học dấu vân tay. Ông nghiên cứu ra rằng dấu vân tay được khởi tạo ở thai nhi vào giai đọan từ 13 đến 19 tuần tuổi và được hình thành đồng thời với sự hoàn thiện các cấu trúc của não bộ.</p>
+                <p>Giáo sư khoa thần kinh học người Canada Penfield đã công bố một biểu đồ thể hiện mối quan hệ giữa các vùng não và chức năng của cơ thể. Trong đó, mối quan hệ giữa dấu vân tay và não cũng đã được chỉ ra.</p>
+                <p>Năm 1986 giải Nobel sinh lý học đã được trao cho 2 tiến sĩ Rita Levi-Montalcini và Stanley Cohen trong công trình nghiên cứu của họ phát hiện ra mối tương quan giữa hệ số NGF (sinh trưởng thần kinh thành não) và EGF (sinh trưởng biểu bì hình thành vân tay). Quá trình phát triển qua các giai đoạn:</p>
+                <p>* Phôi thai 6 -8 tuần: Hình dạng của bàn tay và bàn chân có thể nhìn thấy</p>
+                <p>* Phôi thai 10 – 12 tuần: tay và chân bắt đầu thành đủ hình hài</p>
+                <p>* Phôi thai tuần thứ 13: Các dấu vân tay đã bắt đầu phát triển</p>
+                <p>* Phôi thai tuần thứ 14: Khối nhà chính của não bộ bắt đầu hình thành bao gồm cả võ não</p>
+                <p>* Phôi thai tuần 21: Hình thức hình thành vân tay được hoàn tất.</p>
+                <p>Chuyên gia y khoa Nhật Bản cũng đã chứng minh được rằng các ngón tay liên quan chặt chẽ đến bán cầu não.Phát minh này đã được ứng dụng rộng rãi trong nhiều lĩnh vực,tạo ra một bước tiến vượt trội trong y khoa.</p>
+                <p>Vì thế, để tìm hiểu tại sao một người lại hành động như thế này còn người kia hành động theo cách khác, một người có năng khiếu về lĩnh vực này nhưng người khác lại không, thì chỉ có một con đường duy nhất là nghiên cứu họ thông qua dấu ấn rất riêng được thể hiện bằng các đường vân trên ngón tay.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phản hồi khách hàng — khách hàng cùng cuốn báo cáo sinh trắc -->
+    <section class="reviews" id="phan-hoi">
+      <div class="container">
+        <header class="section-head section-head--white section-head--on-dark">
+          <div class="section-head__crest" aria-hidden="true">
+            <span class="section-head__crest-ring"></span>
+            <span class="section-head__crest-icon"><i class="fas fa-quote-left"></i></span>
+          </div>
+          <h2 class="vc-heading vc-heading--white">PHẢN HỒI KHÁCH HÀNG</h2>
+        </header>
+        <div class="review-grid review-grid--4">
+          <figure class="review-card" style="--reveal-delay:0">
+            <div class="review-card__media">
+              <img class="review-card__photo" src="/assets/img/review-01.jpg" alt="Gia đình anh Phúc tư vấn sinh trắc vân tay tại nhà" loading="lazy" />
+            </div>
+            <blockquote>
+              Là người hiểu rõ con cái. Nhưng bài sinh trắc làm tôi bất ngờ với kết quả nhận được. Cảm ơn Touch Finger!
+            </blockquote>
+            <figcaption>A. Phúc</figcaption>
+          </figure>
+          <figure class="review-card" style="--reveal-delay:100">
+            <div class="review-card__media">
+              <img class="review-card__photo" src="/assets/img/review-02.jpg" alt="Gia đình khách hàng với báo cáo sinh trắc" loading="lazy" />
+            </div>
+            <blockquote>
+              Con mình cũng nhanh nhẹn, học cũng tốt, nhưng con đặc biệt thế thì chị cũng chưa nghĩ tới.
+            </blockquote>
+            <figcaption>C. Kiều</figcaption>
+          </figure>
+          <figure class="review-card" style="--reveal-delay:200">
+            <div class="review-card__media">
+              <img class="review-card__photo" src="/assets/img/review-van.jpg" alt="Chị Vân tư vấn sinh trắc vân tay tại Touch Finger" loading="lazy" />
+            </div>
+            <blockquote>
+              Chi phí gói thấp, tưởng kết quả nhận được cũng tương xứng. Nhưng thấy Touch Finger làm rất chuyên nghiệp và tâm huyết.
+            </blockquote>
+            <figcaption>C. Vân</figcaption>
+          </figure>
+          <figure class="review-card" style="--reveal-delay:300">
+            <div class="review-card__media">
+              <img class="review-card__photo" src="/assets/img/review-03.jpg" alt="Khách hàng nhận báo cáo sinh trắc vân tay" loading="lazy" />
+            </div>
+            <blockquote>
+              Trước giờ kết quả học tập, công việc hiện tại cũng đang rất tốt. Nhưng làm gì cũng được làm em rất mơ hồ về khả năng của mình. Cảm ơn Touch Finger đã cho em tìm ra tiềm năng chính của bản thân!
+            </blockquote>
+            <figcaption>E. Long</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="/assets/img/logo.png" alt="Logo Touch Finger" width="44" height="44" />
+        <div>
+          <strong>Trung Tâm Sinh Trắc Touch Finger</strong>
+          <p>Khám phá tài năng bẩm sinh — định hướng phát triển bằng công nghệ sinh trắc vân tay.</p>
+        </div>
+      </div>
+      <div class="footer__contact">
+        <p><i class="fas fa-map-marker-alt"></i> 48 Phạm Văn Nghị, Q. Thanh Khê, TP. Đà Nẵng</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:0762595662">0762.595.662</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:Touchfingerdanang@gmail.com">Touchfingerdanang@gmail.com</a></p>
+        <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/TouchfingerDanang" target="_blank" rel="noopener">Facebook Touch Finger</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        © <span id="year"></span> Trung Tâm Sinh Trắc Touch Finger. Bảo lưu mọi quyền.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nút liên hệ nổi -->
+  <div class="floating">
+    <a href="tel:0762595662" class="floating__btn floating__btn--call" aria-label="Gọi điện"><i class="fas fa-phone"></i></a>
+    <a href="https://zalo.me/0762595662" target="_blank" rel="noopener" class="floating__btn floating__btn--zalo" aria-label="Chat Zalo">Zalo</a>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Chuyển hướng cho Cloudflare Pages
+# Các URL cũ của WordPress -> về trang chủ (tránh lỗi 404 sau khi chuyển sang web tĩnh)
+/wp-admin/*      /    301
+/wp-login.php    /    301
+/?page_id=*      /    301
+/cart            /    301
+/checkout        /    301
+/my-account/*    /    301
