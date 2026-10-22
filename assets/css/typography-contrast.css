@@ -129,3 +129,33 @@ h1, h2, h3, h4, h5, h6,
 p, li, a, button, input, textarea, select, label, summary {
   font-family: "Be Vietnam Pro", Arial, sans-serif !important;
 }
+
+/* Use the testimonial quote's compact text styling consistently for all small/body copy. */
+body {
+  font-family: "Be Vietnam Pro", Arial, sans-serif !important;
+}
+body p,
+body li,
+body blockquote,
+body small,
+body label,
+body summary,
+body figcaption,
+body .topbar__item,
+body .footer,
+body .footer__contact,
+body .center-text,
+body .process-step__body p,
+body .about-item p,
+body .suit-box,
+body .faq__body,
+body .review-card blockquote {
+  font-family: "Be Vietnam Pro", Arial, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.7;
+}
+body .review-card blockquote {
+  font-size: 15px;
+  line-height: 1.8;
+  font-style: italic;
+}
