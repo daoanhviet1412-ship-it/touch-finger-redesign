@@ -1,0 +1,239 @@
+/* Touch Finger — refined calm luxury theme
+   Unified typography, warm ivory surfaces, deep teal and champagne accents. */
+:root {
+  --primary: #244B50;
+  --primary-dark: #18383D;
+  --primary-mid: #315E63;
+  --primary-light: #557B7E;
+  --gold: #B59A68;
+  --gold-light: #D8C6A0;
+  --gold-dark: #8C7449;
+  --gold-glow: rgba(181, 154, 104, 0.20);
+  --cream: #FBFAF6;
+  --ink: #263638;
+  --muted: #687777;
+  --line: #E7E3DA;
+  --bg: #FFFFFF;
+  --bg-soft: #F7F6F1;
+  --bg-warm: #F1EEE5;
+  --font-display: "Be Vietnam Pro", sans-serif;
+  --font-serif: "Be Vietnam Pro", sans-serif;
+  --font-sans: "Be Vietnam Pro", sans-serif;
+  --shadow: 0 8px 28px rgba(36, 75, 80, 0.07);
+  --shadow-lg: 0 18px 48px rgba(36, 75, 80, 0.12);
+  --shadow-gold: 0 8px 26px rgba(181, 154, 104, 0.16);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  letter-spacing: 0;
+  line-height: 1.78;
+}
+.topbar {
+  background: var(--primary-dark);
+}
+.topbar::after {
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  opacity: .65;
+}
+.header {
+  border-bottom-color: rgba(181, 154, 104, .22);
+}
+.header.scrolled {
+  box-shadow: 0 5px 24px rgba(36, 75, 80, .09);
+}
+.brand__text strong {
+  background: none;
+  color: var(--primary);
+  -webkit-text-fill-color: currentColor;
+  letter-spacing: .075em;
+  font-weight: 700;
+}
+.header__cta {
+  background: var(--primary);
+  box-shadow: 0 6px 18px rgba(36, 75, 80, .18);
+}
+.header__cta:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 10px 24px rgba(36, 75, 80, .24);
+}
+.banner {
+  background: var(--primary-dark);
+}
+.banner::before {
+  background: linear-gradient(135deg, rgba(24, 56, 61, .42), rgba(24, 56, 61, .10) 55%, rgba(181, 154, 104, .10));
+}
+.banner::after {
+  background: linear-gradient(0deg, var(--primary-dark) 0%, transparent 100%);
+}
+.banner__hero-sub {
+  font-family: var(--font-sans);
+  letter-spacing: .13em;
+  color: var(--gold-light);
+}
+.banner__hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+.banner__hero-title em {
+  background: none;
+  color: var(--gold-light);
+  -webkit-text-fill-color: currentColor;
+}
+.banner__hero-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(.95rem, 1.4vw, 1.12rem);
+}
+.home-section {
+  background: #fff;
+}
+.home-section:nth-of-type(even) {
+  background: var(--bg-soft);
+}
+.section-head__crest-ring {
+  border-color: rgba(181, 154, 104, .30);
+  background: linear-gradient(160deg, #fff 0%, #F7F4EC 100%);
+  box-shadow: 0 10px 26px rgba(36, 75, 80, .07), inset 0 1px 0 #fff;
+}
+.section-head__crest-ring::before {
+  border-color: rgba(181, 154, 104, .35);
+}
+.section-head__crest-ring::after {
+  border-color: rgba(181, 154, 104, .25);
+}
+.section-head__crest::before {
+  background: linear-gradient(90deg, transparent, var(--gold-light), var(--primary));
+}
+.section-head__crest::after {
+  background: linear-gradient(90deg, var(--primary), var(--gold-light), transparent);
+}
+.vc-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .015em;
+  text-transform: none;
+}
+.vc-heading--blue {
+  color: var(--primary);
+  text-shadow: none;
+}
+.section-head .vc-heading::after,
+.section-head--blue .vc-heading::after {
+  background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+  opacity: .8;
+}
+.center-text--lead::after {
+  background: var(--gold);
+}
+.about-item,
+.suit-card,
+.review-card,
+.faq-item {
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+.about-item {
+  border-radius: 20px;
+}
+.about-item::before {
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--gold-light), var(--primary));
+}
+.about-item__icon-ring,
+.about-item__icon--3 .about-item__icon-ring {
+  background: linear-gradient(145deg, var(--primary-mid), var(--primary-dark));
+  box-shadow: 0 8px 22px rgba(36, 75, 80, .20);
+}
+.about-item__icon--2 .about-item__icon-ring {
+  background: linear-gradient(145deg, var(--gold-light), var(--gold-dark));
+  box-shadow: 0 8px 22px rgba(181, 154, 104, .20);
+}
+.about-item__title,
+.suit-title,
+.process-step__body h3 {
+  font-family: var(--font-display);
+  color: var(--primary);
+  letter-spacing: 0;
+}
+.about-item__title::before {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(181, 154, 104, .13);
+}
+.about-item__title::after {
+  background: linear-gradient(90deg, var(--primary), var(--gold-light));
+}
+.suit-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.suit-title__badge {
+  background: var(--primary);
+}
+.suit-box {
+  background: #fff;
+}
+.process {
+  background: linear-gradient(145deg, #244B50 0%, #18383D 100%);
+}
+.process::before,
+.reviews::before {
+  opacity: .22;
+}
+.section-head--orange .vc-heading,
+.section-head--on-dark .vc-heading {
+  color: #F0E4C8;
+}
+.section-head--orange .vc-heading::after {
+  background: linear-gradient(90deg, transparent, var(--gold-light), #fff, var(--gold-light), transparent);
+}
+.section-head--on-dark .section-head__crest-ring {
+  border-color: rgba(216, 198, 160, .42);
+}
+.process-step__num {
+  background: var(--gold-light);
+  color: var(--primary-dark);
+}
+.process-step__medallion {
+  border-color: rgba(216, 198, 160, .65);
+}
+.gallery-item {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(36, 75, 80, .08);
+}
+.gallery-item:hover {
+  box-shadow: 0 14px 34px rgba(36, 75, 80, .14);
+}
+.reviews {
+  background: linear-gradient(145deg, #244B50 0%, #18383D 100%);
+}
+.reviews .section-head__crest-ring {
+  background: rgba(255, 255, 255, .08);
+}
+.footer {
+  background: linear-gradient(180deg, #18383D 0%, #122D31 100%);
+}
+.footer__brand strong,
+.footer__title {
+  font-family: var(--font-display);
+}
+.btn,
+.button,
+.hero-actions a {
+  border-radius: 999px;
+}
+.floating__btn {
+  box-shadow: 0 6px 18px rgba(24, 56, 61, .20);
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 3px;
+}
+@media (max-width: 768px) {
+  .banner__hero-sub { letter-spacing: .08em; }
+  .vc-heading { text-transform: none; }
+  .about-item, .suit-card, .review-card, .faq-item { box-shadow: 0 5px 18px rgba(36, 75, 80, .06); }
+}
