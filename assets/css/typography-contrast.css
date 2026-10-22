@@ -1,8 +1,8 @@
-/* Typography and contrast pass — references V-Garden/VEHOM: Lora, compact spacing, confident contrast */
+/* Typography system: Playfair Display headings + Be Vietnam Pro body, compact spacing, confident contrast */
 :root {
-  --font-display: "Lora", Georgia, "Times New Roman", serif;
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
-  --font-sans: Inter, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: Be Vietnam Pro, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Remove the widely tracked, overly airy typography from the previous pass. */
