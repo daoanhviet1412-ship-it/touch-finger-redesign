@@ -44,3 +44,61 @@ img, video, iframe { max-width: 100%; }
   .suit-box { padding-inline: 15px; }
   .floating__btn { width: 44px; height: 44px; }
 }
+
+
+/* Targeted spacing reduction: suitability and FAQ sections (30%). */
+.home-section--tight {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.home-section--tight .section-head {
+  margin-bottom: 14px;
+}
+.home-section--tight .suit-grid {
+  gap: 21px;
+  margin-top: 14px;
+}
+.home-section--tight .suit-card__visual {
+  margin-bottom: 0;
+}
+.home-section--tight .suit-title {
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+.home-section--tight .suit-box {
+  padding-top: 14px;
+  padding-bottom: 17px;
+}
+.home-section--tight .suit-box li {
+  margin-bottom: 8px;
+}
+.faq-wrap {
+  gap: 21px;
+}
+.faq-col {
+  gap: 10px;
+}
+.faq__item summary {
+  padding: 12px 14px 12px 12px;
+  gap: 10px;
+}
+.faq__glyph {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+.faq__body {
+  padding: 0 14px 13px;
+}
+.faq__body p {
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .home-section--tight { padding-top: 35px; padding-bottom: 35px; }
+  .home-section--tight .suit-grid { gap: 18px; }
+  .faq-wrap { gap: 10px; }
+  .faq-col { gap: 10px; }
+}
+@media (max-width: 420px) {
+  .home-section--tight { padding-top: 28px; padding-bottom: 28px; }
+}
